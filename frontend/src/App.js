@@ -16,7 +16,8 @@ import ipConfig from "./ipConfig.json";
 
 export const config = {
   // endpoint: `http://${ipConfig.workspaceIp}:8082/v1`,
-  endpoint: `http://localhost:8082/v1`,
+  // endpoint: `http://localhost:8082/v1`,
+  endpoint: `https://qkartnode.onrender.com/v1`,
 };
 
 export default function App(props) {
