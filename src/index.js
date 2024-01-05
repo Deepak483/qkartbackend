@@ -7,8 +7,12 @@ let server;
 const port = config.port;
 
 // TODO: CRIO_TASK_MODULE_UNDERSTANDING_BASICS - Create Mongo connection and get the express app to listen on config.port
-app.use(cors());
-app.options("*", cors());
+const corsOptions = {
+  origin: ["https://qkartlaptop.netlify.app", "http://localhost:3000"],
+  credentials: true,
+};
+app.use(cors(corsOptions));
+// app.options("*", cors());
 mongoose
   .connect(config.mongoose.url, config.mongoose.options)
   .then(() => {
